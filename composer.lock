@@ -4,56 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c530c911d94cdabc868149a05003103",
+    "content-hash": "0b25dd934457b86f302f424fc647b58e",
     "packages": [
-        {
-            "name": "neunerlei/options",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Neunerlei/options-php.git",
-                "reference": "d75bf1e453d409de31ca14ed6fd68a70b2a0e907"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Neunerlei/options-php/zipball/d75bf1e453d409de31ca14ed6fd68a70b2a0e907",
-                "reference": "d75bf1e453d409de31ca14ed6fd68a70b2a0e907",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.3"
-            },
-            "require-dev": {
-                "neunerlei/dbg": "^1.8",
-                "phpunit/phpunit": "^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Neunerlei\\Options\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "LABOR.digital",
-                    "email": "info@labor.tools",
-                    "homepage": "https://www.labor.digital",
-                    "role": "Company"
-                },
-                {
-                    "name": "Martin Neundorfer",
-                    "email": "code@neunerlei.eu",
-                    "homepage": "https://www.neunerlei.eu",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A little helper which can be used to apply a schema to any given array",
-            "time": "2020-03-01T18:03:39+00:00"
-        },
         {
             "name": "symfony/inflector",
             "version": "v5.0.5",

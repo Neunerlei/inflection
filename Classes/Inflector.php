@@ -21,7 +21,6 @@ declare(strict_types=1);
 
 namespace Neunerlei\Inflection;
 
-
 use Neunerlei\Inflection\Adapter\InflectorAdapterInterface;
 use Neunerlei\Inflection\Adapter\SymfonyInflectorAdapter;
 

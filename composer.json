@@ -27,7 +27,6 @@
 	},
 	"require": {
 		"php": "^7.3",
-		"neunerlei/options": "^1.0",
 		"symfony/inflector": "^5.0"
 	},
 	"autoload": {
