@@ -424,10 +424,7 @@ class Inflector {
 	
 	/**
 	 * Converts any given string into a UUID like: 123e4567-e89b-12d3-a456-426655440000.
-	 * Note that this is NOT A REAL UUID(!), but a representation that will unify
-	 * all strings like " ASDF ASDF" and "asdf_ASDF" or " ASDF ASDF " into the
-	 * same, unified format. This is useful if you want to create, unique id's but
-	 * want to combine multiple sets with different word order.
+	 * This is useful if you want to create, unique id's but want to combine multiple strings with different word order.
 	 *
 	 * Note that "ASDF QWER" will result in the same ID as "QWER ASDF", because
 	 * the values will be sorted alphabetically before the id is created.

@@ -186,10 +186,7 @@ Inflector::toComparable("first name last name"); // "first1 last1 name2"
 
 #### toUuid()
 Converts any given string into a UUID like: 123e4567-e89b-12d3-a456-426655440000.
-Note that this is NOT A REAL UUID(!), but a representation that will unify
-all strings like " ASDF ASDF" and "asdf_ASDF" or " ASDF ASDF " into the
-same, unified format. This is useful if you want to create, unique id's but
-want to combine multiple sets with different word order.
+This is useful if you want to create, unique id's but want to combine multiple strings with different word order.
 
 Note that "ASDF QWER" will result in the same ID as "QWER ASDF", because
 the values will be sorted alphabetically before the id is created.
@@ -203,7 +200,7 @@ Inflector::toUuid("first name last name"); // "7f9f995d-6b94-460e-0158-edd97a8b0
 ```
 
 ## Changing the Inflector implementation
-As stated above you can change the actiual implementation of the inflector by providing
+As stated above you can change the actual implementation of the inflector by providing
 a adapter class for the inflector you would like to use the most (pull requests welcome!).
 
 Writing an adapter is easy, create a new class:
