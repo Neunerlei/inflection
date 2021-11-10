@@ -21,27 +21,41 @@ declare(strict_types=1);
 
 namespace Neunerlei\Inflection\Adapter;
 
+use Symfony\Component\String\Inflector\EnglishInflector;
 
-use Symfony\Component\Inflector\Inflector;
-
-class SymfonyInflectorAdapter implements InflectorAdapterInterface {
-	
-	/**
-	 * @inheritDoc
-	 */
-	public function toSingular(string $pluralWord): string {
-		$result = Inflector::singularize($pluralWord);
-		if (is_array($result)) return reset($result);
-		return (string)$result;
-	}
-	
-	/**
-	 * @inheritDoc
-	 */
-	public function toPlural(string $singularWord): string {
-		$result = Inflector::pluralize($singularWord);
-		if (is_array($result)) return reset($result);
-		return (string)$result;
-	}
-	
+class SymfonyInflectorAdapter implements InflectorAdapterInterface
+{
+    protected $inflector;
+    
+    public function __construct()
+    {
+        $this->inflector = new EnglishInflector();
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function toSingular(string $pluralWord): string
+    {
+        $result = $this->inflector->singularize($pluralWord);
+        if (is_array($result)) {
+            return reset($result);
+        }
+        
+        return (string)$result;
+    }
+    
+    /**
+     * @inheritDoc
+     */
+    public function toPlural(string $singularWord): string
+    {
+        $result = $this->inflector->pluralize($singularWord);
+        if (is_array($result)) {
+            return reset($result);
+        }
+        
+        return (string)$result;
+    }
+    
 }
