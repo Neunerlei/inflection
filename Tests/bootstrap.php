@@ -33,12 +33,12 @@ class DummyInflectorAdapter implements InflectorAdapterInterface
 {
     public function toSingular(string $pluralWord): string
     {
-        return "__SINGULAR__";
+        return '__SINGULAR__';
     }
     
     public function toPlural(string $singularWord): string
     {
-        return "__PLURAL__";
+        return '__PLURAL__';
     }
 }
 

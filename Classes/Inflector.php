@@ -34,69 +34,69 @@ class Inflector
      */
     protected const TRANSLITERATIONS
         = [
-            "/À|Á|Â|Ã|Å|Ǻ|Ā|Ă|Ą|Ǎ/" => "A",
-            "/Æ|Ǽ/" => "AE",
-            "/Ä/" => "Ae",
-            "/Ç|Ć|Ĉ|Ċ|Č/" => "C",
-            "/Ð|Ď|Đ/" => "D",
-            "/È|É|Ê|Ë|Ē|Ĕ|Ė|Ę|Ě/" => "E",
-            "/Ĝ|Ğ|Ġ|Ģ|Ґ/" => "G",
-            "/Ĥ|Ħ/" => "H",
-            "/Ì|Í|Î|Ï|Ĩ|Ī|Ĭ|Ǐ|Į|İ|І/" => "I",
-            "/Ĳ/" => "IJ",
-            "/Ĵ/" => "J",
-            "/Ķ/" => "K",
-            "/Ĺ|Ļ|Ľ|Ŀ|Ł/" => "L",
-            "/Ñ|Ń|Ņ|Ň/" => "N",
-            "/Ò|Ó|Ô|Õ|Ō|Ŏ|Ǒ|Ő|Ơ|Ø|Ǿ/" => "O",
-            "/Œ/" => "OE",
-            "/Ö/" => "Oe",
-            "/Ŕ|Ŗ|Ř/" => "R",
-            "/Ś|Ŝ|Ş|Ș|Š/" => "S",
-            "/ẞ/" => "SS",
-            "/Ţ|Ț|Ť|Ŧ/" => "T",
-            "/Þ/" => "TH",
-            "/Ù|Ú|Û|Ũ|Ū|Ŭ|Ů|Ű|Ų|Ư|Ǔ|Ǖ|Ǘ|Ǚ|Ǜ/" => "U",
-            "/Ü/" => "Ue",
-            "/Ŵ/" => "W",
-            "/Ý|Ÿ|Ŷ/" => "Y",
-            "/Є/" => "Ye",
-            "/Ї/" => "Yi",
-            "/Ź|Ż|Ž/" => "Z",
-            "/à|á|â|ã|å|ǻ|ā|ă|ą|ǎ|ª/" => "a",
-            "/ä|æ|ǽ/" => "ae",
-            "/ç|ć|ĉ|ċ|č/" => "c",
-            "/ð|ď|đ/" => "d",
-            "/è|é|ê|ë|ē|ĕ|ė|ę|ě/" => "e",
-            "/ƒ/" => "f",
-            "/ĝ|ğ|ġ|ģ|ґ/" => "g",
-            "/ĥ|ħ/" => "h",
-            "/ì|í|î|ï|ĩ|ī|ĭ|ǐ|į|ı|і/" => "i",
-            "/ĳ/" => "ij",
-            "/ĵ/" => "j",
-            "/ķ/" => "k",
-            "/ĺ|ļ|ľ|ŀ|ł/" => "l",
-            "/ñ|ń|ņ|ň|ŉ/" => "n",
-            "/ò|ó|ô|õ|ō|ŏ|ǒ|ő|ơ|ø|ǿ|º/" => "o",
-            "/ö|œ/" => "oe",
-            "/ŕ|ŗ|ř/" => "r",
-            "/ś|ŝ|ş|ș|š|ſ/" => "s",
-            "/ß/" => "ss",
-            "/ţ|ț|ť|ŧ/" => "t",
-            "/þ/" => "th",
-            "/ù|ú|û|ũ|ū|ŭ|ů|ű|ų|ư|ǔ|ǖ|ǘ|ǚ|ǜ/" => "u",
-            "/ü/" => "ue",
-            "/ŵ/" => "w",
-            "/ý|ÿ|ŷ/" => "y",
-            "/є/" => "ye",
-            "/ї/" => "yi",
-            "/ź|ż|ž/" => "z",
+            '/À|Á|Â|Ã|Å|Ǻ|Ā|Ă|Ą|Ǎ/' => 'A',
+            '/Æ|Ǽ/' => 'AE',
+            '/Ä/' => 'Ae',
+            '/Ç|Ć|Ĉ|Ċ|Č/' => 'C',
+            '/Ð|Ď|Đ/' => 'D',
+            '/È|É|Ê|Ë|Ē|Ĕ|Ė|Ę|Ě/' => 'E',
+            '/Ĝ|Ğ|Ġ|Ģ|Ґ/' => 'G',
+            '/Ĥ|Ħ/' => 'H',
+            '/Ì|Í|Î|Ï|Ĩ|Ī|Ĭ|Ǐ|Į|İ|І/' => 'I',
+            '/Ĳ/' => 'IJ',
+            '/Ĵ/' => 'J',
+            '/Ķ/' => 'K',
+            '/Ĺ|Ļ|Ľ|Ŀ|Ł/' => 'L',
+            '/Ñ|Ń|Ņ|Ň/' => 'N',
+            '/Ò|Ó|Ô|Õ|Ō|Ŏ|Ǒ|Ő|Ơ|Ø|Ǿ/' => 'O',
+            '/Œ/' => 'OE',
+            '/Ö/' => 'Oe',
+            '/Ŕ|Ŗ|Ř/' => 'R',
+            '/Ś|Ŝ|Ş|Ș|Š/' => 'S',
+            '/ẞ/' => 'SS',
+            '/Ţ|Ț|Ť|Ŧ/' => 'T',
+            '/Þ/' => 'TH',
+            '/Ù|Ú|Û|Ũ|Ū|Ŭ|Ů|Ű|Ų|Ư|Ǔ|Ǖ|Ǘ|Ǚ|Ǜ/' => 'U',
+            '/Ü/' => 'Ue',
+            '/Ŵ/' => 'W',
+            '/Ý|Ÿ|Ŷ/' => 'Y',
+            '/Є/' => 'Ye',
+            '/Ї/' => 'Yi',
+            '/Ź|Ż|Ž/' => 'Z',
+            '/à|á|â|ã|å|ǻ|ā|ă|ą|ǎ|ª/' => 'a',
+            '/ä|æ|ǽ/' => 'ae',
+            '/ç|ć|ĉ|ċ|č/' => 'c',
+            '/ð|ď|đ/' => 'd',
+            '/è|é|ê|ë|ē|ĕ|ė|ę|ě/' => 'e',
+            '/ƒ/' => 'f',
+            '/ĝ|ğ|ġ|ģ|ґ/' => 'g',
+            '/ĥ|ħ/' => 'h',
+            '/ì|í|î|ï|ĩ|ī|ĭ|ǐ|į|ı|і/' => 'i',
+            '/ĳ/' => 'ij',
+            '/ĵ/' => 'j',
+            '/ķ/' => 'k',
+            '/ĺ|ļ|ľ|ŀ|ł/' => 'l',
+            '/ñ|ń|ņ|ň|ŉ/' => 'n',
+            '/ò|ó|ô|õ|ō|ŏ|ǒ|ő|ơ|ø|ǿ|º/' => 'o',
+            '/ö|œ/' => 'oe',
+            '/ŕ|ŗ|ř/' => 'r',
+            '/ś|ŝ|ş|ș|š|ſ/' => 's',
+            '/ß/' => 'ss',
+            '/ţ|ț|ť|ŧ/' => 't',
+            '/þ/' => 'th',
+            '/ù|ú|û|ũ|ū|ŭ|ů|ű|ų|ư|ǔ|ǖ|ǘ|ǚ|ǜ/' => 'u',
+            '/ü/' => 'ue',
+            '/ŵ/' => 'w',
+            '/ý|ÿ|ŷ/' => 'y',
+            '/є/' => 'ye',
+            '/ї/' => 'yi',
+            '/ź|ż|ž/' => 'z',
         ];
     
     /**
      * A list of filenames we know and recognize as such
      */
-    protected const FILE_EXTENSIONS = "|3dm|3ds|3g2|3gp|7z|accdb|ai|aif|apk|app|asf|asp|aspx|avi|bak|bat|bin|bmp|c|cab|cbr|cer|cfg|cfm|cgi|class|com|cpl|cpp|crdownload|crx|cs|csr|css|csv|cue|cur|dat|db|dbf|dds|deb|dem|deskthemepack|dll|dmg|dmp|doc|docx|drv|dtd|dwg|dxf|eps|exe|fla|flv|fnt|fon|gadget|gam|ged|gif|gpx|gz|h|hqx|htm|html|icns|ico|ics|iff|indd|ini|iso|jar|java|jpg|jpeg|js|jsp|json|key|keychain|kml|kmz|lnk|log|lua|m|m3u|m4a|m4v|max|mdb|mdf|mid|mim|mov|mp3|mp4|mpa|mpg|msg|msi|nes|obj|odt|otf|pages|part|pct|pdb|pdf|php|pkg|pl|plugin|png|pps|ppt|pptx|prf|ps|psd|pspimage|py|rar|rm|rom|rpm|rss|rtf|sav|sdf|sh|sitx|sln|sql|srt|svg|swf|swift|sys|tar|tar.gz|tax2016|tex|tga|thm|tif|tiff|tmp|toast|torrent|ttf|txt|typescript|ts|typoscript|uue|vb|vcd|vcf|vcxproj|vob|wav|wma|wmv|wpd|wps|wsf|xcodeproj|xhtml|xlr|xls|xlsx|xml|yuv|zip|zipx|";
+    protected const FILE_EXTENSIONS = '|3dm|3ds|3g2|3gp|7z|accdb|ai|aif|apk|app|asf|asp|aspx|avi|bak|bat|bin|bmp|c|cab|cbr|cer|cfg|cfm|cgi|class|com|cpl|cpp|crdownload|crx|cs|csr|css|csv|cue|cur|dat|db|dbf|dds|deb|dem|deskthemepack|dll|dmg|dmp|doc|docx|drv|dtd|dwg|dxf|eps|exe|fla|flv|fnt|fon|gadget|gam|ged|gif|gpx|gz|h|hqx|htm|html|icns|ico|ics|iff|indd|ini|iso|jar|java|jpg|jpeg|js|jsp|json|key|keychain|kml|kmz|lnk|log|lua|m|m3u|m4a|m4v|max|mdb|mdf|mid|mim|mov|mp3|mp4|mpa|mpg|msg|msi|nes|obj|odt|otf|pages|part|pct|pdb|pdf|php|pkg|pl|plugin|png|pps|ppt|pptx|prf|ps|psd|pspimage|py|rar|rm|rom|rpm|rss|rtf|sav|sdf|sh|sitx|sln|sql|srt|svg|swf|swift|sys|tar|tar.gz|tax2016|tex|tga|thm|tif|tiff|tmp|toast|torrent|ttf|txt|typescript|ts|typoscript|uue|vb|vcd|vcf|vcxproj|vob|wav|wma|wmv|wpd|wps|wsf|xcodeproj|xhtml|xlr|xls|xlsx|xml|yuv|zip|zipx|';
     
     /**
      * The class that is used as a default inflector adapter
@@ -161,12 +161,12 @@ class Inflector
     public static function toSlug(string $string): string
     {
         $map = self::TRANSLITERATIONS + [
-                "/[^\s\p{Zs}\p{Ll}\p{Lm}\p{Lo}\p{Lt}\p{Lu}\p{Nd}]/mu" => " ",
-                "/[\s\p{Zs}]+/mu" => "-",
-                sprintf("/^[%s]+|[%s]+$/", "\\-", "\\-") => "",
+                "/[^\s\p{Zs}\p{Ll}\p{Lm}\p{Lo}\p{Lt}\p{Lu}\p{Nd}]/mu" => ' ',
+                "/[\s\p{Zs}]+/mu" => '-',
+                sprintf('/^[%s]+|[%s]+$/', "\\-", "\\-") => '',
             ];
         
-        return strtolower((string)preg_replace(array_keys($map), array_values($map), $string));
+        return strtolower((string)preg_replace(array_keys($map), $map, $string));
     }
     
     /**
@@ -183,21 +183,23 @@ class Inflector
         // Handle file extension
         $ext = pathinfo($string, PATHINFO_EXTENSION);
         if (! empty($ext) && stripos(self::FILE_EXTENSIONS, $ext) !== false) {
-            $ext = "." . $ext;
+            $ext = '.' . $ext;
             $string = trim(substr($string, 0, -strlen($ext)));
         } else {
-            $ext = "";
+            $ext = '';
         }
         
         // Handle filepath if required
-        $path = "";
+        $path = '';
         if ($expectPath) {
-            $string = str_replace(["\\", "/"], DIRECTORY_SEPARATOR, $string);
+            $string = str_replace(["\\", '/'], DIRECTORY_SEPARATOR, $string);
             $parts = explode(DIRECTORY_SEPARATOR, $string);
-            $string = array_pop($parts);
+            $string = (string)array_pop($parts);
+            
             if (! empty($parts)) {
-                array_push($parts, "");
+                $parts[] = '';
             }
+            
             $path = implode(DIRECTORY_SEPARATOR, $parts);
             $string = basename($string);
         }
@@ -235,29 +237,32 @@ class Inflector
             // because the camelCase is broken. The result will be: "this is fa qand more".
             $offset = 0;
             $stringLength = strlen($string);
-            $string = preg_replace_callback("/([A-Z]+)|(?P<DOT>[\s\S])/s", function ($v) use (&$offset, $stringLength) {
-                $a = $v[0];
-                // We need this workaround, as there is no other way of determining the offset in a php regex...
-                $wordLength = strlen($a);
-                $offset += $wordLength;
-                if (isset($v["DOT"])) {
-                    return $a;
-                }
-                $nextWord = "";
-                if ($wordLength > 1 && $offset !== $stringLength) {
-                    $nextWord = " " . substr($a, -1);
-                    $a = substr($a, 0, -1);
-                }
-                
-                return strtolower(" " . $a . $nextWord);
-            }, $string);
+            $string = preg_replace_callback("/([A-Z]+)|(?P<DOT>[\s\S])/",
+                static function ($v) use (&$offset, $stringLength) {
+                    $a = $v[0];
+                    
+                    // We need this workaround, as there is no other way of determining the offset in a php regex...
+                    $wordLength = strlen($a);
+                    $offset += $wordLength;
+                    
+                    if (isset($v['DOT'])) {
+                        return $a;
+                    }
+                    
+                    $nextWord = '';
+                    if ($wordLength > 1 && $offset !== $stringLength) {
+                        $nextWord = ' ' . substr($a, -1);
+                        $a = substr($a, 0, -1);
+                    }
+                    
+                    return strtolower(' ' . $a . $nextWord);
+                }, $string);
         }
         
         // Do the split
         $parts = preg_split($pattern, $string, -1, PREG_SPLIT_NO_EMPTY);
-        $parts = array_map("strtolower", $parts);
         
-        return $parts;
+        return array_map('strtolower', $parts);
     }
     
     /**
@@ -272,7 +277,7 @@ class Inflector
      */
     public static function toSpacedUpper(string $string, bool $intelligentSplitting = false): string
     {
-        return implode(" ", array_map("ucfirst", static::toArray($string, $intelligentSplitting)));
+        return implode(' ', array_map('ucfirst', static::toArray($string, $intelligentSplitting)));
     }
     
     /**
@@ -301,7 +306,7 @@ class Inflector
      */
     public static function toCamelCase(string $string, bool $intelligentSplitting = false): string
     {
-        return implode(array_map("ucfirst", static::toArray($string, $intelligentSplitting)));
+        return implode(array_map('ucfirst', static::toArray($string, $intelligentSplitting)));
     }
     
     /**
@@ -331,7 +336,7 @@ class Inflector
      */
     public static function toDashed(string $string, bool $intelligentSplitting = false): string
     {
-        return implode("-", static::toArray($string, $intelligentSplitting));
+        return implode('-', static::toArray($string, $intelligentSplitting));
     }
     
     /**
@@ -346,7 +351,7 @@ class Inflector
      */
     public static function toUnderscore(string $string, bool $intelligentSplitting = false): string
     {
-        return implode("_", static::toArray($string, $intelligentSplitting));
+        return implode('_', static::toArray($string, $intelligentSplitting));
     }
     
     /**
@@ -384,7 +389,7 @@ class Inflector
         // Only apply if the variable does not contain the prefix already
         $cc = static::toCamelCase(...static::applyToGetterSetterPropOptions($string, $options));
         
-        return (is_null($prefix) ? "get" : $prefix) . $cc;
+        return (is_null($prefix) ? 'get' : $prefix) . $cc;
     }
     
     /**
@@ -403,7 +408,7 @@ class Inflector
      */
     public static function toSetter(string $string, array $options = []): string
     {
-        return "set" . static::toCamelCase(...static::applyToGetterSetterPropOptions($string, $options));
+        return 'set' . static::toCamelCase(...static::applyToGetterSetterPropOptions($string, $options));
     }
     
     
@@ -441,19 +446,19 @@ class Inflector
      */
     public static function toComparable(string $string, bool $appendNumberOfOccurrences = true): string
     {
-        $parts = static::toArray(static::toFile($string));
-        $parts = array_count_values($parts);
+        $parts = array_count_values(static::toArray(static::toFile($string)));
+        
         if ($appendNumberOfOccurrences) {
-            array_walk($parts, function (&$v, $k) use ($appendNumberOfOccurrences) {
+            array_walk($parts, static function (&$v, $k) {
                 $v = $k . $v;
             });
         } else {
             $parts = array_keys($parts);
         }
-        sort($parts);
-        $string = implode(" ", $parts);
         
-        return $string;
+        sort($parts);
+        
+        return implode(' ', $parts);
     }
     
     /**
@@ -472,10 +477,10 @@ class Inflector
     {
         $string = md5(static::toComparable($string));
         
-        return substr($string, 0, 8) . "-" .
-               substr($string, 8, 4) . "-" .
-               substr($string, 12, 4) . "-" .
-               substr($string, 16, 4) . "-" .
+        return substr($string, 0, 8) . '-' .
+               substr($string, 8, 4) . '-' .
+               substr($string, 12, 4) . '-' .
+               substr($string, 16, 4) . '-' .
                substr($string, 20);
     }
     
@@ -490,8 +495,13 @@ class Inflector
     protected static function applyToGetterSetterPropOptions(string $string, array $options): array
     {
         return [
-            isset($options["noSanitizing"]) || in_array("noSanitizing", $options) || in_array("ns", $options) ? $string : static::sanitizeGetterAndSetterPrefix($string),
-            isset($options["intelligentSplitting"]) || in_array("intelligentSplitting", $options) || in_array("is", $options),
+            isset($options['noSanitizing'])
+            || in_array('noSanitizing', $options, true)
+            || in_array('ns', $options, true) ? $string : static::sanitizeGetterAndSetterPrefix($string),
+            
+            isset($options['intelligentSplitting'])
+            || in_array('intelligentSplitting', $options, true)
+            || in_array('is', $options, true),
         ];
     }
     
@@ -505,7 +515,7 @@ class Inflector
      */
     protected static function sanitizeGetterAndSetterPrefix(string $string): string
     {
-        return (string)preg_replace("/^(set|get|is|has)([^a-zöäüß])/", "$2", trim($string));
+        return (string)preg_replace('/^(set|get|is|has)([^a-zöäüß])/u', '$2', trim($string));
     }
     
     /**
@@ -519,21 +529,21 @@ class Inflector
      */
     protected static function getConcreteInflector(): InflectorAdapterInterface
     {
-        if (isset(static::$inflectorAdapter)) {
-            if (get_class(static::$inflectorAdapter) === static::$inflectorAdapterClass) {
-                return static::$inflectorAdapter;
-            }
+        if (isset(static::$inflectorAdapter)
+            && get_class(static::$inflectorAdapter) === static::$inflectorAdapterClass) {
+            return static::$inflectorAdapter;
         }
         
         if (! class_exists(static::$inflectorAdapterClass)) {
-            throw new InvalidInflectorAdapterException("The inflector adapter class: " . static::$inflectorAdapterClass .
-                                                       " does not exist!");
+            throw new InvalidInflectorAdapterException(
+                'The inflector adapter class: ' . static::$inflectorAdapterClass . ' does not exist!');
         }
         
         $adapter = new static::$inflectorAdapterClass();
         if (! $adapter instanceof InflectorAdapterInterface) {
-            throw new InvalidInflectorAdapterException("The inflector adapter class: " . static::$inflectorAdapterClass .
-                                                       " does not implement the required interface: " . InflectorAdapterInterface::class);
+            throw new InvalidInflectorAdapterException(
+                'The inflector adapter class: ' . static::$inflectorAdapterClass .
+                ' does not implement the required interface: ' . InflectorAdapterInterface::class);
         }
         
         return static::$inflectorAdapter = $adapter;
