@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Neunerlei/inflection/compare/v1.2.0...v1.3.0) (2021-11-10)
+
+
+### Features
+
+* replace symfony/inflector with symfony/string component ([cf6a6e6](https://github.com/Neunerlei/inflection/commit/cf6a6e63bc525274091e17c49435015400023468))
+
+
+### Bug Fixes
+
+* **SymfonyInflectorAdapter:** always expect an array from EnglishInflector ([737ddab](https://github.com/Neunerlei/inflection/commit/737ddabe33104043926a4a993e4db3e7fc39af4c))
+
 ## [1.2.0](https://github.com/Neunerlei/inflection/compare/v1.1.0...v1.2.0) (2020-03-11)
 
 
