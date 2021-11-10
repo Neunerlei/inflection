@@ -22,23 +22,24 @@ declare(strict_types=1);
 namespace Neunerlei\Inflection\Adapter;
 
 
-interface InflectorAdapterInterface {
-	
-	/**
-	 * Returns the singular form of a word
-	 *
-	 * @param string $pluralWord A word in plural form
-	 *
-	 * @return string The singular form of the given word
-	 */
-	public function toSingular(string $pluralWord): string;
-	
-	/**
-	 * Returns the plural form of a word
-	 *
-	 * @param string $singularWord A word in singular form
-	 *
-	 * @return string The plural form of the given word
-	 */
-	public function toPlural(string $singularWord): string;
+interface InflectorAdapterInterface
+{
+    
+    /**
+     * Returns the singular form of a word
+     *
+     * @param   string  $pluralWord  A word in plural form
+     *
+     * @return string The singular form of the given word
+     */
+    public function toSingular(string $pluralWord): string;
+    
+    /**
+     * Returns the plural form of a word
+     *
+     * @param   string  $singularWord  A word in singular form
+     *
+     * @return string The plural form of the given word
+     */
+    public function toPlural(string $singularWord): string;
 }

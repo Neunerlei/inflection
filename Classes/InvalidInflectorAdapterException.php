@@ -22,6 +22,9 @@ declare(strict_types=1);
 namespace Neunerlei\Inflection;
 
 
-class InvalidInflectorAdapterException extends \Exception {
-	
+use Exception;
+
+class InvalidInflectorAdapterException extends Exception
+{
+
 }

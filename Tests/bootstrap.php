@@ -24,18 +24,23 @@ namespace Neunerlei\Inflection\Assets;
 use Neunerlei\Inflection\Adapter\InflectorAdapterInterface;
 use Neunerlei\Inflection\Inflector;
 
-class DummyInflectorAdapter implements InflectorAdapterInterface {
-	public function toSingular(string $pluralWord): string {
-		return "__SINGULAR__";
-	}
-	
-	public function toPlural(string $singularWord): string {
-		return "__PLURAL__";
-	}
+class DummyInflectorAdapter implements InflectorAdapterInterface
+{
+    public function toSingular(string $pluralWord): string
+    {
+        return "__SINGULAR__";
+    }
+    
+    public function toPlural(string $singularWord): string
+    {
+        return "__PLURAL__";
+    }
 }
 
-class DummyInflectorBridge extends Inflector {
-	public static function getInflectorAdapterInstance() {
-		return Inflector::getConcreteInflector();
-	}
+class DummyInflectorBridge extends Inflector
+{
+    public static function getInflectorAdapterInstance()
+    {
+        return Inflector::getConcreteInflector();
+    }
 }
