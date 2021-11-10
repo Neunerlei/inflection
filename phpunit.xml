@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
   ~ Copyright 2020 Martin Neundorfer (Neunerlei)
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,6 +17,11 @@
   -->
 
 <phpunit colors="true" bootstrap="./Tests/bootstrap.php">
+	<coverage processUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">./Classes/</directory>
+		</include>
+	</coverage>
 	<testsuites>
 		<testsuite name="Tests">
 			<directory>./Tests/</directory>
