@@ -26,7 +26,9 @@ use Neunerlei\Inflection\Adapter\InflectorAdapterInterface;
 use Neunerlei\Inflection\Adapter\SymfonyInflectorAdapter;
 use Neunerlei\Inflection\Assets\DummyInflectorAdapter;
 use Neunerlei\Inflection\Assets\DummyInflectorBridge;
+use Neunerlei\Inflection\Assets\DummyInvalidInflectorAdapter;
 use Neunerlei\Inflection\Inflector;
+use Neunerlei\Inflection\InvalidInflectorAdapterException;
 use PHPUnit\Framework\TestCase;
 
 class InflectorTest extends TestCase
@@ -62,6 +64,34 @@ class InflectorTest extends TestCase
         
         // Reset one last time
         Inflector::$inflectorAdapterClass = SymfonyInflectorAdapter::class;
+    }
+    
+    public function testMissingAdapterClassFail(): void
+    {
+        $this->expectException(InvalidInflectorAdapterException::class);
+        $this->expectExceptionMessage('The inflector adapter class: MissingAdapterClass does not exist!');
+        
+        try {
+            /** @noinspection PhpUndefinedClassInspection */
+            Inflector::$inflectorAdapterClass = \MissingAdapterClass::class;
+            Inflector::toPlural('foo');
+        } finally {
+            Inflector::$inflectorAdapterClass = SymfonyInflectorAdapter::class;
+        }
+    }
+    
+    public function testInvalidAdapterInterfaceFail(): void
+    {
+        $this->expectException(InvalidInflectorAdapterException::class);
+        $this->expectExceptionMessage('The inflector adapter class: ' . DummyInvalidInflectorAdapter::class .
+                                      ' does not implement the required interface: ' . InflectorAdapterInterface::class);
+        
+        try {
+            Inflector::$inflectorAdapterClass = DummyInvalidInflectorAdapter::class;
+            Inflector::toPlural('foo');
+        } finally {
+            Inflector::$inflectorAdapterClass = SymfonyInflectorAdapter::class;
+        }
     }
     
     public function _testSymfonyToSingularProvider(): array
