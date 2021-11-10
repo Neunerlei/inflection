@@ -38,11 +38,8 @@ class SymfonyInflectorAdapter implements InflectorAdapterInterface
     public function toSingular(string $pluralWord): string
     {
         $result = $this->inflector->singularize($pluralWord);
-        if (is_array($result)) {
-            return reset($result);
-        }
         
-        return (string)$result;
+        return (string)reset($result);
     }
     
     /**
@@ -51,11 +48,8 @@ class SymfonyInflectorAdapter implements InflectorAdapterInterface
     public function toPlural(string $singularWord): string
     {
         $result = $this->inflector->pluralize($singularWord);
-        if (is_array($result)) {
-            return reset($result);
-        }
         
-        return (string)$result;
+        return (string)reset($result);
     }
     
 }
