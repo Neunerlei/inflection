@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/Neunerlei/inflection/compare/v1.3.0...v1.3.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* reliably inflect strings like "FOO_BAR" or "HELLO-world" with the intelligentSplitting option ([63a5cc9](https://github.com/Neunerlei/inflection/commit/63a5cc9c2be54b738e62fcabf38f0bba892f655a))
+
 ## [1.3.0](https://github.com/Neunerlei/inflection/compare/v1.2.0...v1.3.0) (2021-11-10)
 
 
