@@ -224,11 +224,21 @@ class Inflector
     public static function toArray(string $string, bool $intelligentSplitting = false): array
     {
         // Build pattern
-        $pattern = "/(?=[A-Z])|[\-]+|[_]+|[.]+|[\s]+/";
+        $separatorPattern = '[\-]+|[_]+|[.]+|[\s]+';
+        $pattern = '/(?=[A-Z])|' . $separatorPattern . '/';
         
         // Handle intelligent splitting
         if ($intelligentSplitting) {
             // Precompile
+            // This ensures that words like "FOO_BAR" or "foo-BAR" and alike will be split intelligently into
+            // ["foo", "bar"]
+            $s = $string;
+            $string = preg_replace_callback(
+                '/(^|' . $separatorPattern . ')([A-Z]+)(' . $separatorPattern . '|$)/',
+                static function ($v) {
+                    return $v[1] . strtolower($v[2]) . $v[3];
+                }, $string);
+            
             // This replaces everything that's in upper case with itself but with a space in front.
             // If there is more than a single char, like in ThisIsAGreatWord it will strip the
             // G (in Great) off and push it into the next word. The result will be: this is a great word.

@@ -210,6 +210,7 @@ class InflectorTest extends TestCase
             [['f', 'a', 'q'], 'FAQ'],
             [['hello', 'world'], 'HelloWORLD', true],
             [['hello', 'world'], 'Hello WORLD', true],
+            [['hello', 'world'], 'HELLO_WORLD', true],
             [['faq'], 'FAQ', true],
             [['this', 'is', 'faq', 'and', 'more'], 'ThisIsFAQAndMore', true],
             [['this', 'is', 'fa', 'qand', 'more'], 'ThisIsFAQandMore', true] // Broken camel case
@@ -239,6 +240,7 @@ class InflectorTest extends TestCase
             
             ['Hello World', 'HelloWORLD', true],
             ['Hello World', 'Hello WORLD', true],
+            ['Hello World', 'HELLO_WORLD', true],
             ['Faq', 'FAQ', true],
             ['This Is Faq And More', 'ThisIsFAQAndMore', true],
             ['This Is Fa Qand More', 'ThisIsFAQandMore', true] // Broken camel case
@@ -269,6 +271,7 @@ class InflectorTest extends TestCase
             
             ['HelloWorld', 'HelloWORLD', true],
             ['HelloWorld', 'Hello WORLD', true],
+            ['HelloWorld', 'HELLO_WORLD', true],
             ['Faq', 'FAQ', true],
             ['ThisIsFaqAndMore', 'ThisIsFAQAndMore', true],
             ['ThisIsFaQandMore', 'ThisIsFAQandMore', true] // Broken camel case
@@ -298,6 +301,7 @@ class InflectorTest extends TestCase
             
             ['helloWorld', 'HelloWORLD', true],
             ['helloWorld', 'Hello WORLD', true],
+            ['helloWorld', 'HELLO_WORLD', true],
             ['faq', 'FAQ', true],
             ['thisIsFaqAndMore', 'ThisIsFAQAndMore', true],
             ['thisIsFaQandMore', 'ThisIsFAQandMore', true] // Broken camel case
@@ -327,6 +331,7 @@ class InflectorTest extends TestCase
             
             ['hello-world', 'HelloWORLD', true],
             ['hello-world', 'Hello WORLD', true],
+            ['hello-world', 'HELLO_WORLD', true],
             ['faq', 'FAQ', true],
             ['this-is-faq-and-more', 'ThisIsFAQAndMore', true],
             ['this-is-fa-qand-more', 'ThisIsFAQandMore', true] // Broken camel case
@@ -356,6 +361,7 @@ class InflectorTest extends TestCase
             
             ['hello_world', 'HelloWORLD', true],
             ['hello_world', 'Hello WORLD', true],
+            ['hello_world', 'HELLO_WORLD', true],
             ['faq', 'FAQ', true],
             ['this_is_faq_and_more', 'ThisIsFAQAndMore', true],
             ['this_is_fa_qand_more', 'ThisIsFAQandMore', true] // Broken camel case
