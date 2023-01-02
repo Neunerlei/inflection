@@ -239,9 +239,6 @@ After that the toSingular() and toPlural() methods will be resolved using your o
 - Install the dependencies with ```composer install```
 - Run the tests with ```composer test```
 
-## Special Thanks
-Special thanks goes to the folks at [LABOR.digital](https://labor.digital/) (which is the word german for laboratory and not the english "work" :D) for making it possible to publish my code online.
-
 ## Postcardware
 You're free to use this package, but if it makes it to your production environment I highly appreciate you sending me a postcard from your hometown, mentioning which of our package(s) you are using.
 

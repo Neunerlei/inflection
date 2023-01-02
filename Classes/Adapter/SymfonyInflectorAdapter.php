@@ -22,14 +22,15 @@ declare(strict_types=1);
 namespace Neunerlei\Inflection\Adapter;
 
 use Symfony\Component\String\Inflector\EnglishInflector;
+use Symfony\Component\String\Inflector\InflectorInterface;
 
 class SymfonyInflectorAdapter implements InflectorAdapterInterface
 {
-    protected $inflector;
+    protected InflectorInterface $inflector;
     
-    public function __construct()
+    public function __construct(?InflectorInterface $concreteInflector = null)
     {
-        $this->inflector = new EnglishInflector();
+        $this->inflector = $concreteInflector ?? new EnglishInflector();
     }
     
     /**

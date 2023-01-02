@@ -103,19 +103,19 @@ class Inflector
      *
      * @var string
      */
-    public static $inflectorAdapterClass = SymfonyInflectorAdapter::class;
+    public static string $inflectorAdapterClass = SymfonyInflectorAdapter::class;
     
     /**
      * The instance of the inflector adapter after it was instantiated
      *
      * @var InflectorAdapterInterface
      */
-    protected static $inflectorAdapter;
+    protected static InflectorAdapterInterface $inflectorAdapter;
     
     /**
      * Can be used to inject a custom inflector adapter if you don't want to use the symfony inflector
      *
-     * @param   \Neunerlei\Inflection\Adapter\InflectorAdapterInterface  $adapter
+     * @param InflectorAdapterInterface $adapter
      */
     public static function setInflectorAdapter(InflectorAdapterInterface $adapter): void
     {
@@ -232,7 +232,6 @@ class Inflector
             // Precompile
             // This ensures that words like "FOO_BAR" or "foo-BAR" and alike will be split intelligently into
             // ["foo", "bar"]
-            $s = $string;
             $string = preg_replace_callback(
                 '/(^|' . $separatorPattern . ')([A-Z]+)(' . $separatorPattern . '|$)/',
                 static function ($v) {
@@ -283,7 +282,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toSpacedUpper(string $string, bool $intelligentSplitting = false): string
     {
@@ -297,7 +296,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toHuman(string $string, bool $intelligentSplitting = false): string
     {
@@ -312,7 +311,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toCamelCase(string $string, bool $intelligentSplitting = false): string
     {
@@ -327,7 +326,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toCamelBack(string $string, bool $intelligentSplitting = false): string
     {
@@ -342,7 +341,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toDashed(string $string, bool $intelligentSplitting = false): string
     {
@@ -357,7 +356,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toUnderscore(string $string, bool $intelligentSplitting = false): string
     {
@@ -371,7 +370,7 @@ class Inflector
      * @param   bool    $intelligentSplitting  -> See Inflector::toArray() $intelligentSplitting for details
      *
      * @return string
-     * @see \Neunerlei\Inflection\Inflector::toArray()
+     * @see Inflector::toArray
      */
     public static function toDatabase(string $string, bool $intelligentSplitting = false): string
     {
@@ -534,8 +533,8 @@ class Inflector
      * It also allows lacy loading, so that the inflector is only instantiated when there are really values to
      * singularize and pluralize.
      *
-     * @return \Neunerlei\Inflection\Adapter\InflectorAdapterInterface
-     * @throws \Neunerlei\Inflection\InvalidInflectorAdapterException
+     * @return InflectorAdapterInterface
+     * @throws InvalidInflectorAdapterException
      */
     protected static function getConcreteInflector(): InflectorAdapterInterface
     {

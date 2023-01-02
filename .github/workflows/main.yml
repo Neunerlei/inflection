@@ -1,6 +1,7 @@
 name: Create new Release
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -13,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     
     strategy:
-      max-parallel: 2
+      max-parallel: 3
       matrix:
-        php-versions: [ 7.3, 7.4 ]
+        php-versions: [ 8.0, 8.1, 8.2 ]
     
     name: Test on PHP ${{ matrix.php-versions }}
     steps:
@@ -46,8 +47,6 @@ jobs:
       -
         name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
-        # PHPUnit Coverage is broken on PHP7.3
-        if: matrix.php-versions == '7.4'
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./Tests/Coverage.xml
