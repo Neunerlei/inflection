@@ -20,8 +20,8 @@
 		"neunerlei/dbg": "^2.0.1"
 	},
 	"require": {
-		"php": "^8.1",
-		"symfony/string": "^6.2.2"
+		"php": "^8.0",
+		"symfony/string": "^v5.4.10|^6.2.2"
 	},
 	"autoload": {
 		"psr-4": {
