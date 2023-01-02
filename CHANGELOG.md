@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/Neunerlei/inflection/compare/v1.3.1...v2.0.0) (2023-01-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* PHP 8.1 is now required, also updated the symfony
+inflector version
+
+### Features
+
+* update to php 8.1 ([41df0b8](https://github.com/Neunerlei/inflection/commit/41df0b886fafe3013535fab982f3a5a69c08f8ec))
+
+
+### Bug Fixes
+
+* ensure compatibility with php 8.0 ([89cc657](https://github.com/Neunerlei/inflection/commit/89cc6578faff3cceb71e78e4ff94ae697665e497))
+* ensure test compatibility with php 8.0 ([4822212](https://github.com/Neunerlei/inflection/commit/48222128a6233b5c17981a756d6e39ba6f57b923))
+
 ### [1.3.1](https://github.com/Neunerlei/inflection/compare/v1.3.0...v1.3.1) (2022-08-26)
 
 
